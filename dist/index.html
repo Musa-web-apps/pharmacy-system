@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PharmaCare Pro</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        min-height: 100vh;
+        transition: background 0.3s, color 0.3s;
+      }
+      body, body.dark {
+        color: #e8ecf1;
+        background: #0a0e1a;
+        background-image:
+          radial-gradient(ellipse at 20% 20%, rgba(79,195,247,0.15) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 80%, rgba(156,39,176,0.12) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 50%, rgba(0,150,136,0.08) 0%, transparent 60%);
+        background-attachment: fixed;
+      }
+      body.light {
+        color: #1a1a2e;
+        background: #f0f2f5;
+        background-image: none;
+      }
+      /* Dark scrollbar */
+      body.dark ::-webkit-scrollbar, body:not(.light) ::-webkit-scrollbar { width: 6px; }
+      body.dark ::-webkit-scrollbar-track, body:not(.light) ::-webkit-scrollbar-track { background: transparent; }
+      body.dark ::-webkit-scrollbar-thumb, body:not(.light) ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+      /* Light scrollbar */
+      body.light ::-webkit-scrollbar { width: 6px; }
+      body.light ::-webkit-scrollbar-track { background: transparent; }
+      body.light ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+      /* Dark select/input */
+      body.dark select option, body:not(.light) select option { background: #1a2035; color: #e8ecf1; }
+      body.dark select optgroup, body:not(.light) select optgroup { background: #111528; color: #4fc3f7; font-weight: 700; font-size: 13px; padding: 6px 0; }
+      body.dark input::placeholder, body:not(.light) input::placeholder { color: rgba(255,255,255,0.3); }
+      body.light select optgroup { background: #e8ecf1; color: #1a8fcb; font-weight: 700; font-size: 13px; padding: 6px 0; }
+      body.dark input[type="date"]::-webkit-calendar-picker-indicator, body:not(.light) input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); }
+      /* Light select/input */
+      body.light select option { background: #fff; color: #1a1a2e; }
+      body.light input::placeholder { color: rgba(0,0,0,0.35); }
+      body.light input[type="date"]::-webkit-calendar-picker-indicator { filter: none; }
+      ::selection { background: rgba(79,195,247,0.3); }
+    </style>
+    <script type="module" crossorigin src="/assets/index-B_OfZcsT.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
